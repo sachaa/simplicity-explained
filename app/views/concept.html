@@ -1,0 +1,26 @@
+<div class="concept">
+    <h1 class="concept-header">
+        <a href="#/">Make Complex Simple Again</a> 
+    </h1>
+    <div class="row">
+        <div class="col-md-4 concept-image">
+            <img src="{{conceptItem.icon}}" />
+        </div>
+        <div class="col-md-8 concept-details">
+            <h1 class="concept-name">{{conceptItem.name}}</h1>
+            <div ng-if="conceptItem.description" class="concept-description">
+                {{conceptItem.description}}
+            </div>
+            <div ng-if="conceptItem.bullets">
+                <ul class="concept-bullets">
+                    <li class="concept-bullet" ng-repeat="b in conceptItem.bullets">
+                        <span ng-if="!b.link">{{b.text}}</span>
+                        <a ng-if="b.link" ng-href="{{b.link}}" target="_blank">
+                            {{b.text}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>    
+    </div>
+</div>

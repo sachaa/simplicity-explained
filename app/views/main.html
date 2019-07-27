@@ -1,0 +1,140 @@
+<h1 class="page-header">Make Complex Simple Again</h1>
+
+<section class="why-section">
+  <h2 class="page-section-header">
+    Why
+    <span class="page-section-header-details">Should I bother?</span>
+  </h2>
+  <div class="quotes">
+    <div class="quote-text">
+      {{quote.text}}
+    </div>
+    <div class="quote-author">
+      {{quote.author}}
+    </div>
+  </div>
+  <div class="principles">
+    <button class="principle" ng-attr-title="{{concept.description}}" ng-click="openConcept(concept)"
+      ng-repeat="concept in concepts | filter:{ group: 'principles' }">
+      <div class="concept-icon">
+        <img src="{{concept.icon}}" />
+      </div>
+      <div class="concept-name">
+        {{concept.name}}
+      </div>
+    </button>
+  </div>
+</section>
+
+<section class="how-section">
+  <h2 class="page-section-header">
+    How
+    <span class="page-section-header-details">do I get my audience to...</span>
+  </h2>
+
+  <div class="panel-group" role="tablist" id="accordion" aria-multiselectable="true">
+    <div class="principle-container panel panel-default">
+      <div class="principle-container-header panel-heading" role="tab">
+        <h3 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
+            aria-controls="collapseOne">
+            <span class="section-number">1</span> Discover
+          </a>
+        </h3>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse" role="tabpanel">
+        <div class="principles">
+          <button class="principle" 
+                  ng-attr-title="{{concept.description}}" 
+                  ng-click="openConcept(concept)"
+                  ng-repeat="concept in concepts | filter:{ group: 'discover' }">
+            <div class="concept-icon">
+              <img src="{{concept.icon}}" />
+            </div>
+            <div class="concept-name">
+              {{concept.name}}
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="principle-container panel panel-default">
+      <div class="principle-container-header panel-heading" role="tab">
+        <h3 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+            aria-controls="collapseTwo">
+            <span class="section-number">2</span> Understand
+          </a>
+        </h3>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel">
+        <div class="principles">
+          <button class="principle" 
+                  ng-attr-title="{{concept.description}}" 
+                  ng-click="openConcept(concept)"
+                  ng-repeat="concept in concepts | filter:{ group: 'learn' }">
+            <div class="concept-icon">
+              <img src="{{concept.icon}}" />
+            </div>
+            <div class="concept-name">
+              {{concept.name}}
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="principle-container panel panel-default">
+      <div class="principle-container-header panel-heading" role="tab">
+        <h3 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+            aria-controls="collapseThree">
+            <span class="section-number">3</span> Act
+          </a>
+        </h3>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel">
+        <div class="principles">
+          <button class="principle" 
+                  ng-attr-title="{{concept.description}}" 
+                  ng-click="openConcept(concept)"
+                  ng-repeat="concept in concepts | filter:{ group: 'act' }">
+            <div class="concept-icon">
+              <img src="{{concept.icon}}" />
+            </div>
+            <div class="concept-name">
+              {{concept.name}}
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="principle-container panel panel-default">
+      <div class="principle-container-header panel-heading" role="tab">
+        <h3 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+            aria-controls="collapseFour">
+            <span class="section-number">4</span> Remember
+          </a>
+        </h3>
+      </div>
+      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel">
+        <div class="principles">
+          <button class="principle" 
+                  ng-attr-title="{{concept.description}}" 
+                  ng-click="openConcept(concept)"
+                  ng-repeat="concept in concepts | filter:{ group: 'remember' }">
+            <div class="concept-icon">
+              <img src="{{concept.icon}}" />
+            </div>
+            <div class="concept-name">
+              {{concept.name}}
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
